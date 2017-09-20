@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<style name="ThemePicker.Dark" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimaryDark">#222222</item>
+		<item name="pickerBackground">#202020</item>
+		
+		<item name="pickerToolbarBackground">#323232</item>
+		<item name="pickerBack">@drawable/sp_ic_back_dark</item>
+		<item name="pickerToolbarText">选择照片</item>
+		<item name="pickerToolbarTextColor">@android:color/white</item>
+		<item name="pickerToolbarTextSize">16sp</item>
+		<item name="pickerDoneMinWidth">60dp</item>
+		<item name="pickerDoneBackground">@drawable/sp_bg_done_dark</item>
+		<item name="pickerDoneTextColor">@android:color/white</item>
+		<item name="pickerDoneTextSize">12sp</item>
+		<item name="pickerAlbumTextColor">@android:color/white</item>
+		<item name="pickerAlbumTextSize">14sp</item>
+		<item name="pickerAlbumIndicator">@drawable/sp_ic_album_indicator_dark</item>
+		<item name="pickerPreviewTextColor">@android:color/white</item>
+		<item name="pickerPreviewTextSize">14sp</item>
+		
+		<item name="pickerAlbumLayer">#90000000</item>
+		<item name="pickerAlbumBackground">#424242</item>
+		<item name="pickerAlbumOffset">150dp</item>
+		<item name="pickerAlbumTitleTextColor">@android:color/white</item>
+		<item name="pickerAlbumTitleTextSize">16sp</item>
+		<item name="pickerAlbumContentTextColor">#CCCCCC</item>
+		<item name="pickerAlbumContentTextSize">14sp</item>
+		<item name="pickerAlbumCheckImage">@drawable/sp_ic_album_check_dark</item>
+		
+		<item name="pickerCameraImage">@drawable/sp_ic_camera_dark</item>
+		<item name="pickerPlaceholderImage">@drawable/sp_ic_picture_loading_dark</item>
+		<item name="pickerFailureImage">@drawable/sp_ic_picture_error_dark</item>
+		<item name="pickerLayer">@drawable/sp_bg_picture_layer_dark</item>
+		<item name="pickerPictureCheckImage">@drawable/sp_ic_picture_check_dark</item>
+	</style>
+	
+	<style name="ThemeViewer.Dark" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimaryDark">#222222</item>
+		<item name="viewerBackground">#202020</item>
+		<item name="viewerBack">@drawable/sp_ic_back_dark</item>
+		<item name="viewerDelete">@drawable/sp_ic_remove_dark</item>
+		<item name="viewerToolbarBackground">#323232</item>
+		<item name="viewerToolbarText">查看</item>
+		<item name="viewerToolbarTextColor">@android:color/white</item>
+		<item name="viewerToolbarTextSize">16sp</item>
+		<item name="viewerIndicatorBackground">@drawable/sp_bg_page_indicator</item>
+		<item name="viewerIndicatorTextColor">@android:color/white</item>
+		<item name="viewerIndicatorTextSize">16sp</item>
+		<item name="viewerPlaceholderImage">@drawable/sp_ic_picture_loading_dark</item>
+		<item name="viewerFailureImage">@drawable/sp_ic_picture_error_dark</item>
+	</style>
+</resources>

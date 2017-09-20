@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.shyman.library.picture">
+	
+	<!-- 写入外部存储 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- 读取外部存储 -->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<!-- 相机权限 -->
+	<uses-permission android:name="android.permission.CAMERA"/>
+	
+	<application>
+		<activity
+			android:name=".picker.SPPicturePickerActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/ThemePicker.Dark"/>
+		<activity
+			android:name=".picker.SPPicturePreviewActivity"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".viewer.SPPictureViewerActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/ThemeViewer.Dark"/>
+		<activity
+			android:name="com.yalantis.ucrop.UCropActivity"
+			android:screenOrientation="portrait"
+			android:theme="@style/ThemePicker.Dark"/>
+		
+		<provider
+			android:name=".widget.PictureProvider"
+			android:authorities="${applicationId}.PictureProvider"
+			android:exported="false"
+			android:grantUriPermissions="true"
+			android:readPermission="android.permission.READ_EXTERNAL_STORAGE"
+			android:writePermission="android.permission.WRITE_EXTERNAL_STORAGE">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/sp_picture_paths"/>
+		</provider>
+	</application>
+
+</manifest>

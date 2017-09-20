@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/pickerBackground"
+                android:fitsSystemWindows="true"
+                tools:context=".picker.SPPicturePreviewActivity">
+	
+	<android.support.v4.view.ViewPager
+		android:id="@id/spViewPager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+	
+	<LinearLayout
+		android:id="@id/spToolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/pickerToolbarBackground"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		
+		<ImageView
+			android:id="@id/spBack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"
+			android:background="?selectableItemBackgroundBorderless"
+			android:padding="5dp"
+			android:scaleType="centerInside"
+			android:src="?attr/pickerBack"/>
+		
+		<TextView
+			android:id="@id/spTitle"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1.0"
+			android:gravity="center_vertical"
+			android:text="?attr/pickerToolbarText"
+			android:textColor="?attr/pickerToolbarTextColor"
+			android:textSize="?attr/pickerToolbarTextSize"/>
+		
+		<TextView
+			android:id="@id/spDone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginStart="10dp"
+			android:background="?attr/pickerDoneBackground"
+			android:gravity="center"
+			android:minWidth="?attr/pickerDoneMinWidth"
+			android:textColor="?attr/pickerDoneTextColor"
+			android:textSize="?attr/pickerDoneTextSize"/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:id="@id/spActionbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="?attr/pickerToolbarBackground"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		tools:visibility="visible">
+		
+		<TextView
+			android:id="@id/spEdit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:padding="12dp"
+			android:textColor="@android:color/white"
+			android:textSize="14sp"
+			tools:text="@string/sp_edit"/>
+		
+		<View
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1.0"
+			android:background="@android:color/transparent"
+			android:clickable="true"/>
+		
+		<TextView
+			android:id="@id/spSelected"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:drawableLeft="?attr/pickerPictureCheckImage"
+			android:drawablePadding="3dp"
+			android:drawableStart="?attr/pickerPictureCheckImage"
+			android:gravity="center_vertical"
+			android:padding="12dp"
+			android:text="@string/sp_select"
+			android:textColor="@android:color/white"
+			android:textSize="14sp"/>
+	</LinearLayout>
+</RelativeLayout>

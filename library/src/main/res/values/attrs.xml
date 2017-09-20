@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<attr name="pickerBackground" format="color|reference"/>
+	<attr name="pickerToolbarBackground" format="color|reference"/>
+	<attr name="pickerBack" format="reference"/>
+	<attr name="pickerToolbarText" format="string"/>
+	<attr name="pickerToolbarTextColor" format="color"/>
+	<attr name="pickerToolbarTextSize" format="dimension"/>
+	<attr name="pickerDoneMinWidth" format="dimension"/>
+	<attr name="pickerDoneBackground" format="reference"/>
+	<attr name="pickerDoneTextColor" format="color"/>
+	<attr name="pickerDoneTextSize" format="dimension"/>
+	<attr name="pickerAlbumTextColor" format="color|reference"/>
+	<attr name="pickerAlbumTextSize" format="dimension"/>
+	<attr name="pickerAlbumIndicator" format="reference"/>
+	<attr name="pickerPreviewTextColor" format="color|reference"/>
+	<attr name="pickerPreviewTextSize" format="dimension"/>
+	
+	<attr name="pickerAlbumLayer" format="color"/>
+	<attr name="pickerAlbumBackground" format="color|reference"/>
+	<attr name="pickerAlbumOffset" format="dimension"/>
+	<attr name="pickerAlbumTitleTextColor" format="color"/>
+	<attr name="pickerAlbumTitleTextSize" format="dimension"/>
+	<attr name="pickerAlbumContentTextColor" format="color"/>
+	<attr name="pickerAlbumContentTextSize" format="dimension"/>
+	<attr name="pickerAlbumCheckImage" format="reference"/>
+	
+	<attr name="pickerCameraImage" format="reference"/>
+	<attr name="pickerPlaceholderImage" format="reference"/>
+	<attr name="pickerFailureImage" format="reference"/>
+	<attr name="pickerLayer" format="color|reference"/>
+	<attr name="pickerPictureCheckImage" format="reference"/>
+	
+	<attr name="viewerBackground" format="color|reference"/>
+	<attr name="viewerToolbarSize" format="dimension"/>
+	<attr name="viewerBack" format="reference"/>
+	<attr name="viewerDelete" format="reference"/>
+	<attr name="viewerToolbarBackground" format="color|reference"/>
+	<attr name="viewerToolbarText" format="string"/>
+	<attr name="viewerToolbarTextColor" format="color"/>
+	<attr name="viewerToolbarTextSize" format="dimension"/>
+	<attr name="viewerIndicatorBackground" format="reference"/>
+	<attr name="viewerIndicatorTextColor" format="color"/>
+	<attr name="viewerIndicatorTextSize" format="dimension"/>
+	<attr name="viewerPlaceholderImage" format="reference"/>
+	<attr name="viewerFailureImage" format="reference"/>
+</resources>

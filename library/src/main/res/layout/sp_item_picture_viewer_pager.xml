@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.shyman.library.picture.widget.ZoomableDraweeView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@id/spPictureView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	app:failureImage="?attr/viewerFailureImage"
+	app:failureImageScaleType="center"
+	app:placeholderImage="?attr/viewerPlaceholderImage"
+	app:placeholderImageScaleType="center"/>
