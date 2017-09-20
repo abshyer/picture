@@ -28,7 +28,7 @@ public class SPPicker implements Parcelable {
 	int maxWidth;
 	int maxHeight;
 	int quality = 100;
-	String cachePath;
+	private String cachePath;
 	
 	public static Builder picker() {
 		return picker(R.style.ThemePicker_Dark);

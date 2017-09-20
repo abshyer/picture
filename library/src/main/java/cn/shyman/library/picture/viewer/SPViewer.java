@@ -34,6 +34,22 @@ public class SPViewer implements Parcelable {
 		return builder;
 	}
 	
+	public static Uri viewPictureUri(Intent data) {
+		return viewPictureUri(data, 0);
+	}
+	
+	public static Uri viewPictureUri(Intent data, int position) {
+		ArrayList<Uri> pictureUriList = viewPictureUriList(data);
+		if (pictureUriList == null || pictureUriList.size() < position) {
+			return null;
+		}
+		return pictureUriList.get(position);
+	}
+	
+	public static ArrayList<Uri> viewPictureUriList(Intent data) {
+		return data.getParcelableArrayListExtra(VIEWER);
+	}
+	
 	public static class Builder {
 		private int themeId;
 		private ArrayList<Uri> pictureUriList;

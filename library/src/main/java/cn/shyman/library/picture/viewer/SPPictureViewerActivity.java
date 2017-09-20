@@ -58,24 +58,17 @@ public class SPPictureViewerActivity extends AppCompatActivity implements Handle
 			return;
 		}
 		
-		observeContent();
-		observeToolbar();
-		observePicturePager();
-		toggleFullScreen();
-	}
-	
-	private void observeContent() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 			Window window = getWindow();
 			window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 			window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 		}
-		
+		setTheme(mSPViewer.themeId);
 		setContentView(R.layout.sp_activity_picture_viewer);
 		
-		mViewPager = (ViewPager) findViewById(R.id.spViewPager);
-		mTVPageIndicator = (TextView) findViewById(R.id.spPageIndicator);
-		ViewCompat.setTransitionName(mViewPager, SPViewer.TRANSITION_NAME);
+		observeToolbar();
+		observePicturePager();
+		toggleFullScreen();
 	}
 	
 	private void observeToolbar() {
@@ -113,6 +106,10 @@ public class SPPictureViewerActivity extends AppCompatActivity implements Handle
 	}
 	
 	private void observePicturePager() {
+		mViewPager = (ViewPager) findViewById(R.id.spViewPager);
+		mTVPageIndicator = (TextView) findViewById(R.id.spPageIndicator);
+		ViewCompat.setTransitionName(mViewPager, SPViewer.TRANSITION_NAME);
+		
 		mPicturePagerAdapter = new PicturePagerAdapter(
 				this, mSPViewer,
 				new GestureDetector.SimpleOnGestureListener() {
