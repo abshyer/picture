@@ -31,14 +31,6 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"/>
 	
-	<cn.shyman.picture.TestDraweeView
-		android:id="@+id/simpleDraweeView"
-		android:layout_width="300dp"
-		android:layout_height="100dp"
-		android:transitionName="image"
-		app:actualImageScaleType="centerCrop"
-		app:placeholderImage="@drawable/sp_ic_picture_error_dark"/>
-	
 	<cn.shyman.library.picture.widget.PictureLayout
 		android:id="@+id/pictureLayout"
 		android:layout_width="match_parent"

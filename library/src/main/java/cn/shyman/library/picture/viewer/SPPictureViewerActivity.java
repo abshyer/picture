@@ -93,7 +93,7 @@ public class SPPictureViewerActivity extends AppCompatActivity implements Handle
 				mPicturePagerAdapter.notifyDataSetChanged();
 				
 				Intent data = new Intent();
-				data.putExtra(SPViewer.VIEWER, mSPViewer);
+				data.putExtra(SPViewer.VIEWER, mSPViewer.pictureUriList);
 				setResult(RESULT_OK, data);
 				if (mSPViewer.pictureUriList.size() == 0) {
 					finish();

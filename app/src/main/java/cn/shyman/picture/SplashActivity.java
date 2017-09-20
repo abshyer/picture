@@ -12,7 +12,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
 
-import cn.shyman.library.picture.picker.PictureInfo;
 import cn.shyman.library.picture.picker.SPPicker;
 import cn.shyman.library.picture.viewer.SPViewer;
 import cn.shyman.library.picture.widget.PictureLayout;
@@ -27,22 +26,11 @@ public class SplashActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		
-		this.tvContent = (TextView) findViewById(R.id.tvContent);
-		simpleDraweeView = (SimpleDraweeView) findViewById(R.id.simpleDraweeView);
-		simpleDraweeView.setImageURI(Uri.parse("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505539245598&di=7270119e470db490d51dd4a53d4844ca&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F9825bc315c6034a81c94dd93c1134954092376a9.jpg"));
-		simpleDraweeView.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				turnDetails();
-			}
-		});
-		// turn();
-		
 		findViewById(R.id.btnCount).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				SPPicker.picker()
-						.count(9)
+						.count(1)
 						.compress(80)
 						.build(SplashActivity.this, 1);
 			}
@@ -74,6 +62,20 @@ public class SplashActivity extends AppCompatActivity {
 				SPPicker.picker()
 						.count(9)
 						.build(SplashActivity.this, 2);
+			}
+			
+			@Override
+			public void onEdit(int position, Uri pictureUri) {
+				pictureLayout.removePictureUri(position);
+			}
+			
+			@Override
+			public void onSelect(int position, Uri pictureUri) {
+				SPViewer.viewer()
+						.editable(true)
+						.uriList(pictureLayout.getPictureList())
+						.position(position)
+						.build(SplashActivity.this, 3);
 			}
 		});
 	}
@@ -118,26 +120,17 @@ public class SplashActivity extends AppCompatActivity {
 	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == 1) {
-			if (resultCode == RESULT_OK) {
-				ArrayList<PictureInfo> pictureInfoList = SPPicker.pickPictureInfoList(data);
-				StringBuilder builder = new StringBuilder();
-				for (PictureInfo pictureInfo : pictureInfoList) {
-					builder.append(pictureInfo.getPictureUri())
-							.append("\n")
-							.append(pictureInfo.getPictureWidth())
-							.append(" ")
-							.append(pictureInfo.getPictureHeight())
-							.append("\n");
-				}
-				this.tvContent.setText(builder);
-			}
-			return;
-		}
 		if (requestCode == 2) {
 			if (resultCode == RESULT_OK) {
 				ArrayList<Uri> pictureUriList = SPPicker.pickPictureUriList(data);
 				this.pictureLayout.addPictureUri(pictureUriList);
+			}
+			return;
+		}
+		if (requestCode == 3) {
+			if (resultCode == RESULT_OK) {
+				ArrayList<Uri> pictureUriList = SPViewer.viewPictureUriList(data);
+				this.pictureLayout.setPictureList(pictureUriList);
 			}
 			return;
 		}

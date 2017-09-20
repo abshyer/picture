@@ -85,7 +85,7 @@ public class SPPicker implements Parcelable {
 		private int aspectY;
 		private int maxWidth;
 		private int maxHeight;
-		private int quality;
+		private int quality = 100;
 		private String cachePath;
 		
 		public Builder count(int count) {
@@ -179,7 +179,6 @@ public class SPPicker implements Parcelable {
 				throw new RuntimeException("can't write file!");
 			}
 			this.cachePath = cachePath.getPath();
-			System.out.println(this.cachePath);
 			
 			SPPicker spPicker = new SPPicker();
 			spPicker.themeId = this.themeId;
