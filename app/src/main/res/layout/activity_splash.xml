@@ -6,7 +6,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context="cn.shyman.picture.SplashActivity">
+	tools:context=".SplashActivity">
 	
 	<Button
 		android:id="@+id/btnCount"
@@ -38,5 +38,20 @@
 		android:transitionName="image"
 		app:actualImageScaleType="centerCrop"
 		app:placeholderImage="@drawable/sp_ic_picture_error_dark"/>
-
+	
+	<cn.shyman.library.picture.widget.PictureLayout
+		android:id="@+id/pictureLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:background="@android:color/white"
+		android:padding="10dp"
+		app:picture_editDrawable="@drawable/ic_delete_picture"
+		app:picture_horizontalPadding="10dp"
+		app:picture_maxCount="8"
+		app:picture_pictureRatio="1"
+		app:picture_pictureViewLayout="@layout/include_picture_view"
+		app:picture_rowCount="5"
+		app:picture_supportInsert="true"
+		app:picture_insertBackground="@mipmap/img_upload"/>
 </LinearLayout>

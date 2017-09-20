@@ -15,10 +15,12 @@ import java.util.ArrayList;
 import cn.shyman.library.picture.picker.PictureInfo;
 import cn.shyman.library.picture.picker.SPPicker;
 import cn.shyman.library.picture.viewer.SPViewer;
+import cn.shyman.library.picture.widget.PictureLayout;
 
 public class SplashActivity extends AppCompatActivity {
 	private TextView tvContent;
 	private SimpleDraweeView simpleDraweeView;
+	private PictureLayout pictureLayout;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,16 @@ public class SplashActivity extends AppCompatActivity {
 						.editable(true)
 						.aspectRatio(1, 1)
 						.build(SplashActivity.this, 1);
+			}
+		});
+		
+		this.pictureLayout = (PictureLayout) findViewById(R.id.pictureLayout);
+		this.pictureLayout.setOnPictureListener(new PictureLayout.OnPictureListener() {
+			@Override
+			public void onInsert() {
+				SPPicker.picker()
+						.count(9)
+						.build(SplashActivity.this, 2);
 			}
 		});
 	}
@@ -119,6 +131,13 @@ public class SplashActivity extends AppCompatActivity {
 							.append("\n");
 				}
 				this.tvContent.setText(builder);
+			}
+			return;
+		}
+		if (requestCode == 2) {
+			if (resultCode == RESULT_OK) {
+				ArrayList<Uri> pictureUriList = SPPicker.pickPictureUriList(data);
+				this.pictureLayout.addPictureUri(pictureUriList);
 			}
 			return;
 		}
