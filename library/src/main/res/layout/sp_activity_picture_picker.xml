@@ -115,7 +115,8 @@
 			android:layout_height="match_parent"
 			android:layout_weight="1.0"
 			android:background="@android:color/transparent"
-			android:clickable="true"/>
+			android:clickable="true"
+			android:focusable="true"/>
 		
 		<TextView
 			android:id="@id/spPreview"
