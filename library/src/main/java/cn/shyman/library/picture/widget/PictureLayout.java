@@ -546,6 +546,7 @@ public class PictureLayout extends ViewGroup {
 	private View createEditView() {
 		ImageView editView = new ImageView(getContext());
 		editView.setImageDrawable(this.editDrawable);
+		editView.setScaleType(ImageView.ScaleType.CENTER);
 		return editView;
 	}
 	
@@ -601,8 +602,7 @@ public class PictureLayout extends ViewGroup {
 	private void bindEditView(View view, final int position) {
 		ImageView editView = (ImageView) view;
 		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
-				RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT
-		);
+				RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
 		layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 		editView.setLayoutParams(layoutParams);
@@ -624,9 +624,9 @@ public class PictureLayout extends ViewGroup {
 	 */
 	private void setLayoutParamsMargin(MarginLayoutParams layoutParams) {
 		if (this.editDrawable != null) {
-			int margin = this.editDrawable.getIntrinsicWidth() / 2;
-			layoutParams.topMargin = margin;
-			layoutParams.rightMargin = margin;
+			// int margin = this.editDrawable.getIntrinsicWidth() / 2;
+			// layoutParams.topMargin = margin;
+			// layoutParams.rightMargin = margin;
 		}
 	}
 	
