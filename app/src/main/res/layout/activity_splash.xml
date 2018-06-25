@@ -43,7 +43,7 @@
 		app:picture_maxCount="8"
 		app:picture_pictureRatio="1"
 		app:picture_pictureViewLayout="@layout/include_picture_view"
-		app:picture_rowCount="5"
+		app:picture_rowCount="3"
 		app:picture_supportInsert="true"
-		app:picture_insertBackground="@mipmap/img_upload"/>
+		app:picture_insertBackground="@mipmap/dynamic_img_publish_dynamic_insert"/>
 </LinearLayout>

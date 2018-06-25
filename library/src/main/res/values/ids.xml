@@ -23,4 +23,8 @@
 	<item name="spTitle" type="id"/>
 	<item name="spContent" type="id"/>
 	<item name="spSelected" type="id"/>
+	
+	<item name="mediaPicture" type="id"/>
+	<item name="mediaEdit" type="id"/>
+	<item name="mediaLoading" type="id"/>
 </resources>

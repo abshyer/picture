@@ -58,4 +58,50 @@
 		<attr name="picture_insertBackground" format="reference"/>
 		<attr name="picture_pictureViewLayout" format="reference"/>
 	</declare-styleable>
+	
+	<declare-styleable name="MediaLayout">
+		<attr name="media_horizontalPadding" format="dimension"/>
+		<attr name="media_verticalPadding" format="dimension"/>
+		
+		<attr name="media_pictureLayoutId" format="reference"/>
+		<attr name="media_editLayoutId" format="reference"/>
+		
+		<attr name="media_maxCount" format="integer"/>
+		<attr name="media_rowCount" format="integer"/>
+		<attr name="media_viewRatio" format="float"/>
+		
+		<attr name="media_showMode" format="enum">
+			<enum name="fixed" value="0"/>
+			<enum name="wrap" value="1"/>
+		</attr>
+		<attr name="media_wrapBorderlineCount" format="integer"/>
+		
+		
+		<!--<attr name="picture_pictureRound" format="dimension"/>-->
+		<!--<attr name="picture_picturePlaceholder" format="reference"/>-->
+		<!---->
+		<!--<attr name="picture_pictureProgress" format="fraction"/>-->
+		<!--<attr name="picture_pictureProgressDrawable" format="reference"/>-->
+		<!---->
+		<attr name="media_editDrawable" format="reference"/>
+		<attr name="media_editPosition" format="enum">
+			<enum name="inside" value="0"/>
+			<enum name="border" value="1"/>
+			<enum name="outside" value="2"/>
+		</attr>
+		<!--<attr name="picture_editGravity" format="enum">-->
+		<!--<enum name="leftTop" value="0x1"/>-->
+		<!--<enum name="rightTop" value="0x2"/>-->
+		<!--<enum name="leftBottom" value="0x3"/>-->
+		<!--<enum name="rightBottom" value="0x4"/>-->
+		<!--</attr>-->
+		<!---->
+		<attr name="media_supportInsert" format="boolean"/>
+		<attr name="media_insertDrawable" format="reference"/>
+		<attr name="media_insertBackground" format="reference"/>
+		<attr name="media_insertGravity" format="enum">
+			<enum name="start" value="0"/>
+			<enum name="end" value="1"/>
+		</attr>
+	</declare-styleable>
 </resources>

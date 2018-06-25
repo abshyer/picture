@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".SplashActivity">
+	
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		
+		<cn.shyman.library.picture.widget.MediaLayout
+			android:id="@+id/mediaLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@android:color/holo_red_dark"
+			app:media_editDrawable="@drawable/ic_delete_picture"
+			app:media_editLayoutId="@layout/include_edit_layout"
+			app:media_editPosition="border"
+			app:media_horizontalPadding="10dp"
+			app:media_insertBackground="@mipmap/dynamic_img_publish_dynamic_insert"
+			app:media_insertGravity="start"
+			app:media_maxCount="10"
+			app:media_pictureLayoutId="@layout/include_picture_view"
+			app:media_rowCount="3"
+			app:media_showMode="fixed"
+			app:media_supportInsert="true"
+			app:media_verticalPadding="10dp"
+			app:media_viewRatio="1.0"
+			app:media_wrapBorderlineCount="2"/>
+	</ScrollView>
+</LinearLayout>
